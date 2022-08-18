@@ -30,13 +30,14 @@ export default function GetRequest() {
       <Container
         maxWidth="xl
       "
-        sx={{ margin: "auto", maxWidth: "1200px" }}
+        sx={{ margin: "auto", maxWidth: "1200px", mb: 5 }}
       >
         <h1 align="center">BOOKS COLLECTION</h1>
 
         <Box sx={{ display: "flex", flexWrap: "wrap" }}>
           {book.map((book) => (
             <Card
+              key={book.id}
               raised
               sx={{
                 maxWidth: 280,
@@ -46,14 +47,26 @@ export default function GetRequest() {
               }}
             >
               <CardHeader
-                title={JSON.stringify(book.title)}
-                subheader={JSON.stringify(book.author)}
+                sx={{
+                  height: 180,
+                  display: "flex",
+                  alignItems: "center",
+                  // flex: 1,
+                  // width: null,
+                  // objectFit: "contain",
+                  // height: "auto",
+                  // maxHeight: "250px",
+                  // width: "auto",
+                  // maxWidth: "250px",
+                }}
+                title={book.title}
+                subheader={book.author}
               />
               <CardMedia
                 sx={{
                   height: 200,
                   flex: 1,
-                  width: null,
+                  minWidth: 280,
                   objectFit: "contain",
                   // height: "auto",
                   // maxHeight: "250px",
@@ -62,14 +75,28 @@ export default function GetRequest() {
                 }}
                 component="img"
                 image={book.img}
-                alt={JSON.stringify(book.title)}
+                alt={book.title}
               />
               <CardContent>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{
+                    minHeight: 40,
+                  }}
+                >
+                  {book.summary}
+                </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {JSON.stringify(book.summary)}
+                  <strong>Pages: {book.pages}</strong>
                 </Typography>
               </CardContent>
-              <CardActions disableSpacing>
+              <CardActions
+                disableSpacing
+                sx={{
+                  minHeight: 40,
+                }}
+              >
                 <IconButton aria-label="add to favorites">
                   <FavoriteIcon />
                 </IconButton>
@@ -83,10 +110,4 @@ export default function GetRequest() {
       </Container>
     </>
   );
-}
-
-{
-  /* <div>
-<p>{`${JSON.stringify(book.title)}`}</p>
-</div> */
 }

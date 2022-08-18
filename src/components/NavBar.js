@@ -112,13 +112,14 @@ const NavBar = () => {
             >
               {pages.map((page) => (
                 <Link
+                  key={page.label}
                   to={page.path}
                   style={{
                     color: "inherit",
                     textDecoration: "none",
                   }}
                 >
-                  <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.label}</Typography>
                   </MenuItem>
                 </Link>
@@ -155,6 +156,7 @@ const NavBar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Link
+                key={page.label}
                 to={page.path}
                 style={{
                   color: "inherit",
@@ -162,7 +164,6 @@ const NavBar = () => {
                 }}
               >
                 <Button
-                  key={page.label}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
