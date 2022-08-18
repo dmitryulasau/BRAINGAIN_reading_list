@@ -13,7 +13,14 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AutoStoriesTwoToneIcon from "@mui/icons-material/AutoStoriesTwoTone";
 
-const pages = ["Books Collection", "My books", "Reserved"];
+import { Link } from "react-router-dom";
+
+const pages = [
+  { label: "Books Collection", path: "/collection" },
+  { label: "Find a book", path: "/findbook" },
+  { label: "My books", path: "/mybooks" },
+  { label: "Sign in / sign up", path: "/login" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {
@@ -36,15 +43,20 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ margin: "auto", maxWidth: "900px" }}>
+    <AppBar position="static" sx={{ margin: "auto", maxWidth: "1200px" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AutoStoriesTwoToneIcon
-            sx={{
-              display: { xs: "none", md: "flex" },
-              mr: 1,
-            }}
-          />
+          {/* LOGO */}
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <AutoStoriesTwoToneIcon
+              sx={{
+                display: { xs: "none", md: "flex" },
+                mr: 1,
+              }}
+            />
+          </Link>
+          {/* BOOKSTORE */}
+
           <Typography
             variant="h6"
             noWrap
@@ -99,20 +111,33 @@ const NavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link
+                  to={page.path}
+                  style={{
+                    color: "inherit",
+                    textDecoration: "none",
+                  }}
+                >
+                  <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.label}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
-          <AutoStoriesTwoToneIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-          />
+
+          {/* ICON RESPONSIVE */}
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <AutoStoriesTwoToneIcon
+              sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+            />
+          </Link>
+
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -120,21 +145,30 @@ const NavBar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "white",
               textDecoration: "none",
             }}
           >
-            BOOKSTORE
+            BOOKSTORE RESP
           </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+              <Link
+                to={page.path}
+                style={{
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
               >
-                {page}
-              </Button>
+                <Button
+                  key={page.label}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page.label}
+                </Button>
+              </Link>
             ))}
           </Box>
 
