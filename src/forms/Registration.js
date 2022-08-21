@@ -21,7 +21,7 @@ const FormSchema = Yup.object({
     .required("First Name is required")
     .matches(
       /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-      "First Name can only contain letters."
+      "First Name can only contains letters."
     )
     .min(2, "One letter, seriously?"),
   last_name: Yup.string()
@@ -29,7 +29,7 @@ const FormSchema = Yup.object({
     .required("Last Name is required")
     .matches(
       /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-      "Last Name can only contain letters."
+      "Last Name can only contains letters."
     ),
   email: Yup.string()
     .email("Must be a valid e-mail format")

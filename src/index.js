@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
-import { ThemeProvider } from "@mui/material/styles";
-import primaryTheme from "./themes/PrimaryTheme";
+import CustomThemeProvider from "./context/ThemeContext";
 import AppContextProvider from "./context/AppContext";
 import { BrowserRouter } from "react-router-dom";
 
@@ -12,11 +11,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ThemeProvider theme={primaryTheme}>
+      <CustomThemeProvider>
         <AppContextProvider>
           <App />
         </AppContextProvider>
-      </ThemeProvider>
+      </CustomThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

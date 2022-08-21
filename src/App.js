@@ -21,7 +21,7 @@ const HomePage = () => (
         📙 PLEASE (SIGN IN) OR (REGISTER) TO USE THIS SERVICE 📙
       </h3>
       <img
-        src="https://static.dezeen.com/uploads/2019/07/chongqing-zhongshuge-bookstore-stepwell-x-living-china_sq-b.jpg"
+        src="https://res.cloudinary.com/dulasau/image/upload/v1661097055/BOOKSTORE_yxq4mj.jpg"
         width={700}
         height={"70%"}
         alt="Book store"
@@ -33,20 +33,22 @@ const HomePage = () => (
 function App() {
   return (
     <>
-      <SnackBar />
-      <NavBar />
-      <Box sx={{ minHeight: "90vh" }}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/collection" element={<BooksCollectionView />} />
-          <Route path="/mybooks" element={<MyBooksView />} />
-          <Route path="/findbook" element={<FindBookView />} />
-          <Route path="/login" element={<LoginView />} />
-          <Route path="/logout" element={<LogoutView />} />
-          <Route path="/register" element={<RegisterView />} />
-          <Route path="/profile" element={<ProfileView />} />
-        </Routes>
-      </Box>
+      <div className="main" style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <SnackBar />
+        <NavBar />
+        <Box sx={{ minHeight: "90vh" }}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/collection" element={<BooksCollectionView />} />
+            <Route path="/mybooks" element={<MyBooksView />} />
+            <Route path="/findbook" element={<FindBookView />} />
+            <Route path="/login" element={<LoginView />} />
+            <Route path="/logout" element={<LogoutView />} />
+            <Route path="/register" element={<RegisterView />} />
+            <Route path="/profile" element={<ProfileView />} />
+          </Routes>
+        </Box>
+      </div>
     </>
   );
 }

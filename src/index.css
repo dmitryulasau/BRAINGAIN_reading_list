@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* .main {
+  display: block;
+  position: relative;
+
+  padding-bottom: 20px;
+  max-height: 90vh;
+}
+
+.main::after {
+  content: "";
+  background-image: url(https://res.cloudinary.com/dulasau/image/upload/v1661097055/BOOKSTORE_yxq4mj.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+} */

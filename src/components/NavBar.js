@@ -15,6 +15,7 @@ import AutoStoriesTwoToneIcon from "@mui/icons-material/AutoStoriesTwoTone";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
+import ThemeSwitch from "./ThemeSwitch";
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -128,7 +129,7 @@ const NavBar = () => {
               </Typography>
             </Link>
           )}
-
+          <ThemeSwitch />
           <Box
             sx={{
               flexGrow: 1,
