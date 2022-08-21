@@ -9,6 +9,7 @@ export default function MyBooksView() {
           src="https://c.tenor.com/cSxUGx6IcysAAAAC/college-cramming.gif"
           width={900}
           height={"80%"}
+          alt="Sponge bob book"
         ></img>
       </div>
     </>

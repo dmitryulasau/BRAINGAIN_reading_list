@@ -5,8 +5,7 @@ import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
 import FaceTwoToneIcon from "@mui/icons-material/FaceTwoTone";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+
 import MUIButton from "@mui/material/Button";
 import LoginTwoToneIcon from "@mui/icons-material/LoginTwoTone";
 import Typography from "@mui/material/Typography";
@@ -14,6 +13,11 @@ import Link from "@mui/material/Link";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
+
+import { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
+import useLogin from "../hooks/useLogin";
+import Error from "../components/Error";
 
 const FormSchema = Yup.object({
   email: Yup.string()
@@ -28,7 +32,14 @@ const initialValues = {
 };
 
 export default function Login({ handleChange }) {
+  const { setUser } = useContext(AppContext);
+  const [loginData, setLoginCreds] = useState({});
+  const [error, setError] = useState("");
+
+  useLogin(loginData, setLoginCreds, setError, setUser);
+
   const handleSubmit = (values) => {
+    setLoginCreds(values);
     console.log(values);
   };
 
@@ -82,10 +93,7 @@ export default function Login({ handleChange }) {
             helperText={formik.touched.password && formik.errors.password}
           />
 
-          <FormControlLabel
-            control={<Checkbox name="checkedB" color="primary" />}
-            label="Stay signed in"
-          />
+          <Error>{error}</Error>
           <MUIButton
             type="submit"
             color="primary"
@@ -96,11 +104,7 @@ export default function Login({ handleChange }) {
           >
             Sign In
           </MUIButton>
-          <Typography>
-            <Link href="#" underline="hover" sx={{ color: "#ff533d" }}>
-              Forgot password?
-            </Link>
-          </Typography>
+
           <Typography>
             New user? &nbsp;
             <Link
