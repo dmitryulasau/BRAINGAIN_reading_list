@@ -22,7 +22,7 @@ Deployed version [BRAINGAIN](https://braingain-ulasau.netlify.app/)
 - `https://github.com/dmitryulasau/week8_day1_homework.git`
 - `cd week8_day1_homework`
 
-# To run the app the app folder :
+# To run the app:
 
 - `npm install` (just first time)
 - `npm start`
