@@ -12,7 +12,6 @@ const post = async (data, cancelToken) => {
   const response = await apiClientNoAuth(cancelToken).post(endpointUser, data);
   if (response.ok) {
     user = response.data;
-    console.log(user);
   } else {
     error = "An unexpected error has occured.";
   }

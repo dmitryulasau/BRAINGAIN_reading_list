@@ -34,7 +34,6 @@ export default function LoginView({ handleChange }) {
 
   const handleSubmit = (values) => {
     setLoginCreds(values);
-    console.log(values);
   };
 
   const formik = useFormik({

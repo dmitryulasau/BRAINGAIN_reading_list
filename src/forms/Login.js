@@ -40,7 +40,6 @@ export default function Login({ handleChange }) {
 
   const handleSubmit = (values) => {
     setLoginCreds(values);
-    console.log(values);
   };
 
   const formik = useFormik({

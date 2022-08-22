@@ -17,9 +17,8 @@ import CardActionArea from "@mui/material/CardActionArea";
 import HeartBrokenRoundedIcon from "@mui/icons-material/HeartBrokenRounded";
 
 export default function GetRequest() {
-  const { error, addToList, removeOneFromList, readingList, setAlert, user } =
+  const { addToList, removeOneFromList, readingList, setAlert, user } =
     useContext(AppContext);
-  let { books } = useContext(AppContext);
 
   const [book, setBook] = useState([]);
   const navigate = useNavigate();
@@ -56,7 +55,6 @@ export default function GetRequest() {
       setBook(response.data.books);
     });
   }, []);
-  console.log(book);
 
   return (
     <>

@@ -1,6 +1,5 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 import { bookActionReducer, listActions } from "../reducers/bookActionReducer";
-import useBooks from "../hooks/useBooks";
 
 export const AppContext = createContext();
 
@@ -20,9 +19,6 @@ const AppContextProvider = ({ children }) => {
     _setUser(user);
   };
 
-  // Context for BOOKS
-  let { error, books } = useBooks();
-
   // Context for READING LIST
   const getListFromLS = () => {
     let readingList = localStorage.getItem("readingList");
@@ -31,13 +27,14 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
+  const [bookList, setBookList] = useState([]);
   const [readingList, dispatch] = useReducer(
     bookActionReducer,
     getListFromLS() ?? []
   );
 
   useEffect(() => {
-    localStorage.setItem("readingList", JSON.stringify(readingList));
+    localStorage.setItem("ReadingList", JSON.stringify(readingList));
   }, [readingList]);
 
   // ALERTS
@@ -49,9 +46,8 @@ const AppContextProvider = ({ children }) => {
     setAlert,
     user,
     setUser,
-    books,
-    error,
-
+    bookList,
+    setBookList,
     readingList,
     addToList: (book) => {
       dispatch({ type: listActions.addToList, book });

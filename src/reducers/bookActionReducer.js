@@ -6,7 +6,7 @@ const listActions = {
   emptyList: "emptyList",
 };
 
-function bookActionReducer(readingList = [], { type, book }) {
+function bookActionReducer(readingList, { type, book }) {
   switch (type) {
     case listActions.addToList:
       return [...readingList, book];
@@ -26,7 +26,7 @@ function bookActionReducer(readingList = [], { type, book }) {
     case listActions.emptyList:
       return [];
     default:
-      throw new Error("Invalid action.");
+      throw new Error("Opps...");
   }
 }
 

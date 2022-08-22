@@ -6,6 +6,7 @@ import App from "./App";
 import CustomThemeProvider from "./context/ThemeContext";
 import AppContextProvider from "./context/AppContext";
 import { BrowserRouter } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <BrowserRouter>
       <CustomThemeProvider>
         <AppContextProvider>
+          <CssBaseline />
           <App />
         </AppContextProvider>
       </CustomThemeProvider>
