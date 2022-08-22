@@ -2,9 +2,12 @@ import { Navigate } from "react-router-dom";
 import ReadingList from "../components/ReadingList/ReadingList";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { Button } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 
 export default function ListPage() {
-  const { readingList, user, setAlert } = useContext(AppContext);
+  const { readingList, user, setAlert, emptyList } = useContext(AppContext);
 
   if (user.token) {
     if (readingList.length < 1) {
@@ -23,7 +26,20 @@ export default function ListPage() {
       return (
         <>
           <h1 align="center">{user.first_name.toUpperCase()}'S FAVOURITES</h1>
-
+          <Typography sx={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              sx={{ margin: "auto", width: "20%", mb: 5 }}
+              variant="contained"
+              color="error"
+              aria-label="add-book"
+              onClick={() => {
+                emptyList();
+              }}
+              startIcon={<DeleteForeverRoundedIcon />}
+            >
+              EMPTY READING LIST
+            </Button>
+          </Typography>
           <ReadingList />
         </>
       );
