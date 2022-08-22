@@ -14,6 +14,9 @@ export const themeOptions = {
       default: "#f5f5f5",
       card: "#f8f9fa",
     },
+    avatar: {
+      main: "#ff533d",
+    },
     error: {
       main: "#fa7c92",
     },

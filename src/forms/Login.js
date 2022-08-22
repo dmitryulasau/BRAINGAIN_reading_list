@@ -60,7 +60,7 @@ export default function Login({ handleChange }) {
           }}
         >
           <Grid align="center">
-            <Avatar sx={{ bgcolor: "#ff533d" }}>
+            <Avatar sx={{ bgcolor: "avatar.main" }}>
               <FaceTwoToneIcon />
             </Avatar>
             <h2>Sign In</h2>
@@ -110,7 +110,7 @@ export default function Login({ handleChange }) {
               onClick={() => handleChange("event", 1)}
               href="#"
               underline="hover"
-              sx={{ color: "#ff533d" }}
+              sx={{ color: "secondary.main" }}
             >
               Click to Register!
             </Link>

@@ -5,20 +5,23 @@ export const themeOptions = {
     type: "dark",
     mode: "dark",
     primary: {
-      main: "#0f1626",
+      main: "#FFBD69",
     },
     secondary: {
-      main: "#ff533d",
+      main: "#D1e8e2",
+    },
+    avatar: {
+      main: "#D1e8e2",
     },
     background: {
-      default: "#f5f5f5",
-      paper: "#424242",
+      default: "#adb5bd",
+      paper: "#116466",
     },
     error: {
-      main: "#fa7c92",
+      main: "#ffcb9a",
     },
     warning: {
-      main: "#fff7c0",
+      main: "#FFBD69",
     },
     info: {
       main: "#6ec4db",
@@ -30,15 +33,15 @@ export const themeOptions = {
       primary: "#fff",
     },
   },
-  //   components: {
-  //     MuiAppBar: {
-  //       styleOverrides: {
-  //         colorPrimary: {
-  //           backgroundColor: "",
-  //         },
-  //       },
-  //     },
-  //   },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        colorPrimary: {
+          backgroundColor: "#2C3531",
+        },
+      },
+    },
+  },
 };
 
 const theme = createTheme(themeOptions);

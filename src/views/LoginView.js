@@ -57,7 +57,7 @@ export default function LoginView({ handleChange }) {
           }}
         >
           <Grid align="center">
-            <Avatar sx={{ bgcolor: "#ff533d" }}>
+            <Avatar sx={{ bgcolor: "avatar.main" }}>
               <FaceTwoToneIcon />
             </Avatar>
             <h2>Sign In</h2>

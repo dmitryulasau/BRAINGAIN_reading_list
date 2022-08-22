@@ -85,7 +85,7 @@ export default function ProfileForm({ user }) {
       <Grid>
         <Paper elevation={5} sx={{ p: "20px", width: 340, m: "0 auto" }}>
           <Grid align="center">
-            <Avatar sx={{ bgcolor: "#ff533d" }}>
+            <Avatar sx={{ bgcolor: "avatar.main" }}>
               <FaceTwoToneIcon />
             </Avatar>
             <h2>{user?.token ? "Profile" : "Registration"}</h2>

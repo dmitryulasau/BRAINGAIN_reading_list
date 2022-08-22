@@ -16,7 +16,7 @@ export default function useDeleteUser(delUser) {
         if (response) {
           setAlert({ msg: `ACCOUND DELETED`, cat: "error" });
           localStorage.clear();
-          navigate("/register");
+          navigate("/logout");
         } else if (response === false && response !== undefined) {
           setAlert({ msg: "An unexpected error occured.", cat: "error" });
         }
