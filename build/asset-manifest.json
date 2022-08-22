@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dmitryulasau/week8_day1_homework/static/css/main.bc026509.css",
+    "main.js": "/dmitryulasau/week8_day1_homework/static/js/main.a9cb6506.js",
+    "index.html": "/dmitryulasau/week8_day1_homework/index.html",
+    "main.bc026509.css.map": "/dmitryulasau/week8_day1_homework/static/css/main.bc026509.css.map",
+    "main.a9cb6506.js.map": "/dmitryulasau/week8_day1_homework/static/js/main.a9cb6506.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc026509.css",
+    "static/js/main.a9cb6506.js"
+  ]
+}
