@@ -4,9 +4,28 @@
 
 ## About This Project
 
-BRAINGAIN React project with API.
+BRAINGAIN React project with API. Enjoy our collection of books:
 
-Deployed version [BRAINGAIN](#) (soon...)
+- Login and Register
+- Edit profile
+- Browse books collection
+- View single book
+- Add books to your collection
+- Remove books from collection
+- Switch Themes
+
+Deployed version [BRAINGAIN](https://braingain-ulasau.netlify.app/)
+
+## To clone this repository:
+
+- Navigate into the folder where you want to place this application
+- `https://github.com/dmitryulasau/week8_day1_homework.git`
+- `cd week8_day1_homework`
+
+# To run the app the app folder :
+
+- `npm install` (just first time)
+- `npm start`
 
 ## Questions?
 
