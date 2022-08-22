@@ -49,9 +49,10 @@ export default function LoginView({ handleChange }) {
           elevation={5}
           sx={{
             p: "20px",
-            height: "36.1vh",
-            width: 300,
+            height: "42.1vh",
+            width: 340,
             m: "0 auto",
+
             mt: "61px",
           }}
         >

@@ -1,7 +1,7 @@
 import MuiButton from "@mui/material/Button";
 import HeartBrokenRoundedIcon from "@mui/icons-material/HeartBrokenRounded";
 import { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../../src/context/AppContext";
 
 export default function RemoveBookList({ book }) {
   const { removeBook } = useContext(AppContext);

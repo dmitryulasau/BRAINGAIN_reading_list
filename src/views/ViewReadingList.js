@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import ReadingList from "../components/ReadingList/ReadingList";
+import ReadingList from "../../src/ReadingList/ReadingList";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { Button } from "@mui/material";

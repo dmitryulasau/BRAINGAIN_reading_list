@@ -83,7 +83,7 @@ export default function ProfileForm({ user }) {
   return (
     <form onSubmit={formik.handleSubmit}>
       <Grid>
-        <Paper elevation={5} sx={{ p: "20px", width: 300, m: "0 auto" }}>
+        <Paper elevation={5} sx={{ p: "20px", width: 340, m: "0 auto" }}>
           <Grid align="center">
             <Avatar sx={{ bgcolor: "#ff533d" }}>
               <FaceTwoToneIcon />

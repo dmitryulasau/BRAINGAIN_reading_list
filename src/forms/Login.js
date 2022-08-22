@@ -55,7 +55,7 @@ export default function Login({ handleChange }) {
           sx={{
             p: "20px",
             height: "69.1vh",
-            width: 300,
+            width: 340,
             m: "0 auto",
           }}
         >

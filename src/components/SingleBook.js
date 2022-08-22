@@ -77,10 +77,12 @@ export default function SingleBook() {
       <CardMedia
         component="img"
         sx={{
-          width: "40%",
+          width: "50%",
           maxHeight: 300,
           objectFit: "contain",
           m: 2,
+          p: 2,
+          backgroundColor: "#f8f9fa",
         }}
         image={book.img}
         alt={`Cover ${book.title}`}
@@ -103,7 +105,7 @@ export default function SingleBook() {
         >
           {readingList.map((x) => x.id).includes(book.id) ? (
             <Button
-              sx={{ margin: "auto", width: "40%" }}
+              sx={{ margin: "auto", width: "50%" }}
               variant="contained"
               color="secondary"
               aria-label="remove-book"
