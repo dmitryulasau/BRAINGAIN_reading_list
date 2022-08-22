@@ -14,7 +14,7 @@ export default function useDeleteUser(delUser) {
       (async () => {
         response = await apiUser.del(user.token, source.token);
         if (response) {
-          setAlert({ msg: `Your account has been deleted`, cat: "error" });
+          setAlert({ msg: `ACCOUND DELETED`, cat: "error" });
           localStorage.clear();
           navigate("/register");
         } else if (response === false && response !== undefined) {

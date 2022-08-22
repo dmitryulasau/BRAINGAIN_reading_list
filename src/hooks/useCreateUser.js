@@ -16,12 +16,12 @@ export default function useCreateUser(data) {
         response = await apiUser.post(data, source.token);
         if (response) {
           setAlert({
-            msg: `${data.first_name}, you are registered!`,
+            msg: `${data.first_name}, YOU ARE REGISTERED!`,
             cat: "success",
           });
           navigate("/login");
         } else {
-          setAlert({ msg: "An unexpected error occured.", cat: "error" });
+          setAlert({ msg: "AN UNEXPECTED ERROR!", cat: "error" });
         }
       })();
     }

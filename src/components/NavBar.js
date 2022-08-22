@@ -86,7 +86,7 @@ const NavBar = () => {
             </Link>
           )}
 
-          {/* BOOKSTORE */}
+          {/* BRAINGAIN */}
           {user?.token ? (
             <Link
               to="/collection"
@@ -106,7 +106,7 @@ const NavBar = () => {
                   textDecoration: "none",
                 }}
               >
-                BOOKSTORE
+                BRAINGAIN
               </Typography>
             </Link>
           ) : (
@@ -125,7 +125,7 @@ const NavBar = () => {
                   textDecoration: "none",
                 }}
               >
-                BOOKSTORE
+                BRAINGAIN
               </Typography>
             </Link>
           )}
@@ -218,7 +218,7 @@ const NavBar = () => {
                   textDecoration: "none",
                 }}
               >
-                BOOKSTORE
+                BRAINGAIN
               </Typography>
             </Link>
           ) : (
@@ -237,7 +237,7 @@ const NavBar = () => {
                   textDecoration: "none",
                 }}
               >
-                BOOKSTORE
+                BRAINGAIN
               </Typography>
             </Link>
           )}

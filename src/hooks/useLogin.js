@@ -18,7 +18,7 @@ export default function useLogin(loginData, setLoginCreds, setError, setUser) {
           cancelToken
         );
         if (response.user?.token) {
-          setAlert({ msg: "You are now logged in!", cat: "success" });
+          setAlert({ msg: "LOGGED IN!", cat: "success" });
           setUser(response.user);
           setLoginCreds({});
           navigate("/collection");

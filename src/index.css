@@ -12,18 +12,17 @@ code {
     monospace;
 }
 
-/* .main {
+.main {
   display: block;
   position: relative;
 
   padding-bottom: 20px;
-  max-height: 90vh;
+  height: 90.6vh;
 }
-
 .main::after {
   content: "";
   background-image: url(https://res.cloudinary.com/dulasau/image/upload/v1661097055/BOOKSTORE_yxq4mj.jpg);
-  opacity: 0.5;
+  opacity: 0.8;
   top: 0;
   left: 0;
   bottom: 0;
@@ -33,4 +32,19 @@ code {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-} */
+}
+
+.big {
+  font-weight: 700;
+  font-size: 80px;
+
+  margin-left: 100px;
+  line-height: 1;
+  padding-top: 30px;
+}
+
+.h1big {
+  margin: 0;
+  color: #fff;
+  /* text-shadow: 2px 2px #ff533d; */
+}

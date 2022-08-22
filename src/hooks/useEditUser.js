@@ -21,7 +21,7 @@ export default function useEditUser(data) {
 
           navigate("/profile");
         } else {
-          setAlert({ msg: "An unexpected error occured.", cat: "error" });
+          setAlert({ msg: "AN UNEXPECTED ERROR!", cat: "error" });
         }
       })();
     }

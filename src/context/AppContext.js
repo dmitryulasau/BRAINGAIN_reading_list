@@ -1,4 +1,6 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
+import { bookActionReducer, listActions } from "../reducers/bookActionReducer";
+import useBooks from "../hooks/useBooks";
 
 export const AppContext = createContext();
 
@@ -18,6 +20,26 @@ const AppContextProvider = ({ children }) => {
     _setUser(user);
   };
 
+  // Context for BOOKS
+  let { error, books } = useBooks();
+
+  // Context for READING LIST
+  const getListFromLS = () => {
+    let readingList = localStorage.getItem("readingList");
+    if (readingList) {
+      return JSON.parse(readingList);
+    }
+  };
+
+  const [readingList, dispatch] = useReducer(
+    bookActionReducer,
+    getListFromLS() ?? []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("readingList", JSON.stringify(readingList));
+  }, [readingList]);
+
   // ALERTS
   const [alert, setAlert] = useState({});
 
@@ -27,6 +49,25 @@ const AppContextProvider = ({ children }) => {
     setAlert,
     user,
     setUser,
+    books,
+    error,
+
+    readingList,
+    addToList: (book) => {
+      dispatch({ type: listActions.addToList, book });
+    },
+    addMultipleToList: (book) => {
+      dispatch({ type: listActions.addMultipleToList, book });
+    },
+    removeOneFromList: (book) => {
+      dispatch({ type: listActions.removeOneFromList, book });
+    },
+    removeBook: (book) => {
+      dispatch({ type: listActions.removeBook, book });
+    },
+    emptyList: () => {
+      dispatch({ type: listActions.emptyList });
+    },
   };
 
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;

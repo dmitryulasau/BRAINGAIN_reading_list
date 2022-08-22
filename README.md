@@ -1,12 +1,12 @@
-# React Bookstore
+# React BRAINGAIN
 
 <img src="https://media2.giphy.com/media/WoWm8YzFQJg5i/giphy.gif">
 
 ## About This Project
 
-Bookstore React project with API.
+BRAINGAIN React project with API.
 
-Deployed version [Bookstore](#) (soon...)
+Deployed version [BRAINGAIN](#) (soon...)
 
 ## Questions?
 

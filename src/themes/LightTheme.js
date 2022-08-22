@@ -12,6 +12,7 @@ export const themeOptions = {
     },
     background: {
       default: "#f5f5f5",
+      card: "#f8f9fa",
     },
     error: {
       main: "#fa7c92",

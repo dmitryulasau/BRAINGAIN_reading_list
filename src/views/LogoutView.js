@@ -7,12 +7,12 @@ export default function Logout() {
 
   useEffect(() => {
     setUser({});
-    setAlert({ msg: "You are now logged out.", cat: "info" });
+    setAlert({ msg: "LOGGED OUT", cat: "info" });
   }, [setUser, setAlert]);
 
   return (
     <>
-      <Navigate to="/register" />
+      <Navigate to="/" />
     </>
   );
 }
