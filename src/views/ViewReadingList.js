@@ -16,7 +16,7 @@ export default function ListPage() {
           <h1>PLEASE ADD A BOOK TO SEE YOUR FAVORITES</h1>
           <img
             src="https://res.cloudinary.com/dulasau/image/upload/v1661124237/200_pynmoq.gif"
-            width={900}
+            width={"100%"}
             height={"80%"}
             alt="Sponge bob with a book"
           ></img>

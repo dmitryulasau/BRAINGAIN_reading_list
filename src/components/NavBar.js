@@ -278,7 +278,14 @@ const NavBar = () => {
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar
-                    sx={{ display: { xs: "none" } }}
+                    sx={{
+                      display: {
+                        xs: "none",
+                        sm: "flex",
+                        md: "flex",
+                        lg: "flex",
+                      },
+                    }}
                     alt="Sponge Bob"
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
                   />

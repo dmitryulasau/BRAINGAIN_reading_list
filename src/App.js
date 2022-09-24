@@ -38,11 +38,19 @@ const HomePage = () => (
               xs: {
                 fontSize: "2.6rem!important",
                 marginLeft: "2rem",
-                pt: "10rem",
+                marginTop: "8rem",
               },
               sm: { fontSize: "4rem!important", marginLeft: "4rem" },
-              md: { fontSize: "8rem!important", marginLeft: "5rem" },
-              lg: { fontSize: "10rem!important", marginLeft: "5rem" },
+              md: {
+                fontSize: "8rem!important",
+                marginLeft: "5rem",
+                marginTop: "4rem",
+              },
+              lg: {
+                fontSize: "10rem!important",
+                marginLeft: "5rem",
+                marginTop: "2rem",
+              },
             },
           }}
         >
