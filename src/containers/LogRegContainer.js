@@ -36,7 +36,7 @@ export default function LogRegContainer() {
   }
   return (
     <>
-      <Paper elevation={5} sx={{ width: 340, m: "20px auto" }}>
+      <Paper elevation={5} sx={{ maxWidth: 340, m: "20px auto" }}>
         <Tabs
           variant="fullWidth"
           value={value}

@@ -216,6 +216,9 @@ const NavBar = () => {
                   letterSpacing: ".3rem",
                   color: "white",
                   textDecoration: "none",
+                  typography: {
+                    xs: { display: "none" },
+                  },
                 }}
               >
                 BRAINGAIN
@@ -235,6 +238,9 @@ const NavBar = () => {
                   letterSpacing: ".3rem",
                   color: "white",
                   textDecoration: "none",
+                  typography: {
+                    xs: { fontSize: "0.6rem!important" },
+                  },
                 }}
               >
                 BRAINGAIN
@@ -272,6 +278,7 @@ const NavBar = () => {
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar
+                    sx={{ display: { xs: "none" } }}
                     alt="Sponge Bob"
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"
                   />

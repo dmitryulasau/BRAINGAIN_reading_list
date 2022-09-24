@@ -35,12 +35,12 @@ code {
 }
 
 .big {
-  font-weight: 700;
-  font-size: 80px;
+  /* font-weight: 700;
+  font-size: 80px; */
 
-  margin-left: 100px;
-  line-height: 1;
-  padding-top: 30px;
+  /* margin-left: 100px; */
+  /* line-height: 1; */
+  /* padding-top: 5rem; */
 }
 
 .h1big {

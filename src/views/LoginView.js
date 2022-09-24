@@ -50,7 +50,7 @@ export default function LoginView({ handleChange }) {
           sx={{
             p: "20px",
             height: "42.1vh",
-            width: 340,
+            maxWidth: 340,
             m: "0 auto",
 
             mt: "61px",

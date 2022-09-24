@@ -13,15 +13,74 @@ import ViewReadingList from "./views/ViewReadingList";
 import ViewBook from "./views/ViewBook";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import Typography from "@mui/material/Typography";
 
 const HomePage = () => (
   <>
     <div className="main">
-      <div className="big">
-        <h1 className="h1big">WELCOME</h1>
+      <Typography
+        sx={{
+          color: "#fff",
+          pt: "2rem",
+          typography: {
+            xs: {},
+            sm: {},
+            md: {},
+            lg: {},
+          },
+        }}
+      >
+        <Typography
+          sx={{
+            fontWeight: "700!important",
+            lineHeight: 1,
+            typography: {
+              xs: {
+                fontSize: "2.6rem!important",
+                marginLeft: "2rem",
+                pt: "10rem",
+              },
+              sm: { fontSize: "4rem!important", marginLeft: "4rem" },
+              md: { fontSize: "8rem!important", marginLeft: "5rem" },
+              lg: { fontSize: "10rem!important", marginLeft: "5rem" },
+            },
+          }}
+        >
+          WELCOME
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: "700!important",
+            lineHeight: 1,
+            typography: {
+              xs: { fontSize: "2.6rem!important", marginLeft: "2rem" },
+              sm: { fontSize: "4rem!important", marginLeft: "4rem" },
+              md: { fontSize: "8rem!important", marginLeft: "5rem" },
+              lg: { fontSize: "10rem!important", marginLeft: "5rem" },
+            },
+          }}
+        >
+          TO THE{" "}
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: "700!important",
+            lineHeight: 1,
+            typography: {
+              xs: { fontSize: "2.6rem!important", marginLeft: "2rem" },
+              sm: { fontSize: "4rem!important", marginLeft: "4rem" },
+              md: { fontSize: "8rem!important", marginLeft: "5rem" },
+              lg: { fontSize: "10rem!important", marginLeft: "5rem" },
+            },
+          }}
+        >
+          BRAINGAIN.
+        </Typography>
+
+        {/* <h1 className="h1big">WELCOME</h1>
         <h1 className="h1big">TO THE </h1>
-        <h1 className="h1big">BRAINGAIN.</h1>
-      </div>
+        <h1 className="h1big">BRAINGAIN.</h1> */}
+      </Typography>
       <div align="center">
         <Link
           to="/register"
@@ -30,8 +89,8 @@ const HomePage = () => (
           <Button
             sx={{
               margin: "auto",
-              width: "40%",
-              p: 5,
+              maxWidth: "60%",
+              p: "15px 30px",
               mt: 5,
               fontSize: 30,
               transition: "all 0.4s",
@@ -42,7 +101,20 @@ const HomePage = () => (
             color="secondary"
             aria-label="add-book"
           >
-            ENTER THE KNOWLEDGE
+            <Typography
+              sx={{
+                fontWeight: "700!important",
+
+                typography: {
+                  xs: { fontSize: "0.8rem!important" },
+                  sm: { fontSize: "1.1rem!important" },
+                  md: { fontSize: "1.5rem!important" },
+                  lg: { fontSize: "2rem!important" },
+                },
+              }}
+            >
+              ENTER THE KNOWLEDGE
+            </Typography>
           </Button>
         </Link>
       </div>
