@@ -28,7 +28,7 @@ export default function ListPage() {
           <h1 align="center">{user.first_name.toUpperCase()}'S FAVOURITES</h1>
           <Typography sx={{ display: "flex", justifyContent: "center" }}>
             <Button
-              sx={{ margin: "auto", width: "20%", mb: 5 }}
+              sx={{ margin: "auto", minWidth: "20%", mb: 5 }}
               variant="contained"
               color="error"
               aria-label="add-book"

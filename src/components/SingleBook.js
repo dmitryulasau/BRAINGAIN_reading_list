@@ -66,7 +66,7 @@ export default function SingleBook() {
       elevation={5}
       sx={{
         display: "flex",
-        width: "50%",
+        minWidth: "20%",
         margin: "auto",
         p: 1,
         mt: 4,
@@ -105,7 +105,7 @@ export default function SingleBook() {
         >
           {readingList.map((x) => x.id).includes(book.id) ? (
             <Button
-              sx={{ margin: "auto", width: "50%" }}
+              sx={{ margin: "auto", minWidth: "50%" }}
               variant="contained"
               color="secondary"
               aria-label="remove-book"
@@ -114,7 +114,7 @@ export default function SingleBook() {
               }}
               startIcon={<HeartBrokenRoundedIcon />}
             >
-              Remove from List
+              Remove
             </Button>
           ) : (
             <Button

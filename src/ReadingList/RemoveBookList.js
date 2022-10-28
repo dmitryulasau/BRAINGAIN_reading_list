@@ -9,7 +9,7 @@ export default function RemoveBookList({ book }) {
   return (
     <>
       <MuiButton
-        sx={{ width: "40%" }}
+        sx={{ minWidth: "40%" }}
         color="secondary"
         aria-label="remove book"
         variant="contained"
