@@ -164,7 +164,7 @@ export default function GetRequest() {
                   </Button>
                 ) : (
                   <Button
-                    sx={{ margin: "auto", width: "75%", mb: 1 }}
+                    sx={{ margin: "auto", minWidth: "75%", mb: 1 }}
                     variant="contained"
                     color="primary"
                     aria-label="add-book"

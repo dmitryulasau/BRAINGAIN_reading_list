@@ -118,7 +118,7 @@ export default function SingleBook() {
             </Button>
           ) : (
             <Button
-              sx={{ margin: "auto", width: "40%" }}
+              sx={{ margin: "auto", minWidth: "40%" }}
               variant="contained"
               color="primary"
               aria-label="add-book"
