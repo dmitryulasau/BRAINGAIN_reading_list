@@ -1,6 +1,6 @@
 import { create } from "apisauce";
 
-const base = "https://cae-bootstore.herokuapp.com";
+const base = "https://cae-bookstore.herokuapp.com/";
 
 const apiClient = (cancelToken) =>
   create({
