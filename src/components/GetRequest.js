@@ -49,7 +49,7 @@ export default function GetRequest() {
   };
 
   useEffect(() => {
-    const baseURL = "https://cae-bootstore.herokuapp.com/book";
+    const baseURL = "https://cae-bookstore.herokuapp.com/book";
 
     axios.get(baseURL).then((response) => {
       setBook(response.data.books);
