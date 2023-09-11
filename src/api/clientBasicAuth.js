@@ -1,7 +1,7 @@
 import { create } from "apisauce";
 import base64 from "base-64";
 
-const base = "https://cae-bootstore.herokuapp.com";
+const base = "https://cae-bookstore.herokuapp.com/";
 
 const apiClient = (email, password, cancelToken) =>
   create({
